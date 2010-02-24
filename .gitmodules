@@ -1,0 +1,6 @@
+[submodule "elpa-to-submit/yasnippets-rails"]
+	path = elpa-to-submit/yasnippets-rails
+	url = git://github.com/eschulte/yasnippets-rails.git
+[submodule "elpa-to-submit/rhtml"]
+	path = elpa-to-submit/rhtml
+	url = git://github.com/eschulte/rhtml.git

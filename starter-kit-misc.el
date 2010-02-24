@@ -87,7 +87,7 @@
 
 ;; nxhtml stuff
 (setq mumamo-chunk-coloring 'submode-colored
-      nxhtml-skip-welcome t
+;      nxhtml-skip-welcome t
       indent-region-mode t
       rng-nxml-auto-validate-flag nil)
 

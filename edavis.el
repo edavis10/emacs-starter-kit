@@ -67,8 +67,16 @@
         (indent-for-tab-command)))))
 
 
-(add-to-list 'auto-mode-alist '("\\.liquid$" . nxhtml-mode))
+;; rhtml-mode (because MuMaMo-mode locks up every other day on large
+;; buffers)
+(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/rhtml"))
+     (require 'rhtml-mode)
+     (add-hook 'rhtml-mode-hook
+     	  (lambda () (rinari-launch)))
 
+(add-to-list 'auto-mode-alist '("\\.liquid$" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . rhtml-mode))
+(add-to-list 'auto-mode-alist '("\\.rhtml" . rhtml-mode))
 
 (autoload 'todo-list-mode "todo-list-mode") ;load when needed
  
@@ -109,3 +117,4 @@
 (global-set-key [down] nil)
 (global-set-key [left] nil)
 (global-set-key [right] nil)
+
